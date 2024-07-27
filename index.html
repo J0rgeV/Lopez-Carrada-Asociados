@@ -1,96 +1,162 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>López Carrada & Asociados</title>
+    <head>
+        <title>López Carrada & Asociados</title>
 
-    <!-- Icono -->
-    <link rel="icon" href="assets/logo.ico">
-    
-    <!-- Metadatos  -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="López Carrada & Asociados">
-    <meta name="description" content="López Carrada & Asociados">
-    <meta name="keywords" content="consultoría, consultoría empresarial, consultoría tecnológica, consultoría en México">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Estilos -->
-    <link rel="stylesheet" href="styles/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script defer src="../script/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Fuente -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <span class="menuComprimido" onclick="openNav()">&#9776;</span>
-        <a href="#"><img src="assets/1.png" alt="Logo de López Carrada & Asociados"></a>
-        <div id="mySidenav" class="sidenav" onclick="closeNav()">
-            <a href=""><i class="bi bi-house-fill container boton-animado"></i></a>
-            <a href="#" class="boton-animado">Acerca del equipo</a>
-            <a href="./src/valor.html" class="boton-animado">Propuesta de valor</a>
-            <a href="#" class="boton-animado">Nuestros clientes</a>
-            <a href="#" class="boton-animado">Contacto</a>
-        </div>
+        <!-- Icono -->
+        <link rel="icon" href="assets/logo.ico">
         
-        <nav>
-            <a href="#" class="boton-animado">Acerca del equipo</a>
-            <a href="./src/valor.html" class="boton-animado">Propuesta de valor</a>
-            <a href="#" class="boton-animado">Nuestros clientes</a>
-            <a href="#" class="boton-animado">Contacto</a>
-        </nav>
-    </header>
+        <!-- Metadatos  -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="López Carrada & Asociados">
+        <meta name="description" content="López Carrada & Asociados">
+        <meta name="keywords" content="consultoría, consultoría empresarial, consultoría tecnológica, consultoría en México">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <main onclick="closeNav()">
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="container">
+        <!-- Estilos -->
+        <link rel="stylesheet" href="styles/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Bootstrap Framework -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Bootstrap Framework -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Scroll Tools -->
+
+        <!-- Scripts -->
+        <script defer src="script/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Scroll Tools -->
+
+        <!-- Fuente -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Menú -->
+        <header>
+            <span class="menuComprimido" onclick="abrirMenu()">&#9776;</span>
+            <a href="#"><img class="imagenes-redondas" src="assets/1.png" alt="Logo de López Carrada & Asociados"></a>
+            <div id="mySidenav" class="sidenav" onclick="cerrarMenu()">
+                <a href="#"><i class="bi bi-house-fill container boton-animado"></i></a>
+                <a href="#" class="boton-animado">Acerca del equipo</a>
+                <a href="./src/valor.html" class="boton-animado">Propuesta de valor</a>
+                <a href="./src/clientes.html" class="boton-animado">Nuestros clientes</a>
+                <a href="#" class="boton-animado">Contacto</a>
+            </div>
+            
+            <nav>
+                <a href="#" class="boton-animado">Acerca del equipo</a>
+                <a href="./src/valor.html" class="boton-animado">Propuesta de valor</a>
+                <a href="./src/clientes.html" class="boton-animado">Nuestros clientes</a>
+                <a href="#" class="boton-animado">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal -->
+        
+        <main onclick="cerrarMenu()">
+            <!-- <div class="container text-center" data-aos="flip-up" data-aos-delay="400">
+                <p class="inicio">Proporcionamos servicios de <span class="inicio" style="color:#005fb2;">diagnóstico empresarial</span>, diseño e implementación de <span class="inicio" style="color:#005fb2;">soluciones</span>, capacitación, evaluación & seguimiento <span class="inicio" style="color:#005fb2;">continuo</span>.</p>
+            </div> -->
+            <div class="primera-vista">
+                <p class="text-center imagen-fondo"><img class="container inicio" src="assets/logo.png" alt="Logo de López Carrada & Asociados"></p>
+                <div class="container text-center texto-inicio" data-aos="flip-up" data-aos-delay="400">
+                    <p class="inicio">Proporcionamos servicios de <span class="inicio" style="color:#005fb2;">diagnóstico empresarial</span>, diseño e implementación de <span class="inicio" style="color:#005fb2;">soluciones</span>, capacitación, evaluación & seguimiento <span class="inicio" style="color:#005fb2;">continuo</span>.</p>
+                </div>
+                
+            </div>
+
             <br>
             <br>
             <br>
-            <p class="inicio">Proporcionamos servicios de diagnóstico empresarial, diseño e implementación de soluciones, seguimiento y evaluación, y capacitación continua.</p>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="container">
             <br>
             <br>
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <div class="evento" data-aos="fade-down">
-                <div>
-                    <h1>Misión</h1>
-                    <p>Transformar el panorama
-                        empresarial mexicano,
-                        apoyando a las pequeñas y
-                        medianas empresas (PYMEs)
-                        y a los emprendedores con
-                        soluciones innovadoras y
-                        personalizadas.
-                    </p>
+
+            <div class="container">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="evento" data-aos="fade-down">
+                    <div>
+                        <h1>Misión</h1>
+                        <p>Transformar el panorama
+                            empresarial mexicano,
+                            apoyando a las pequeñas y
+                            medianas empresas (PYMEs)
+                            y a los emprendedores con
+                            soluciones innovadoras y
+                            personalizadas.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="evento" data-aos="fade-down">
+                    <div class="container">
+                        <h1>Visión</h1>
+                        <p>Ser la empresa líder en
+                            consultoría empresarial y
+                            tecnológica en México,
+                            reconocida por nuestro
+                            compromiso con la excelencia,
+                            la innovación y el impacto
+                            positivo en la comunidad
+                            empresarial.
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+
+            <div class="container">
+                <div class="content">
+                    <h1>Valores</h1>
+                </div>
+                <div id="carouselExampleAutoplaying" class="container carousel carousel-dark fondo-carrusel slide p-5 m-0 border-0 bd-example m-0 border-0" data-bs-ride="carousel" data-aos="fade-up">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/1.png" class="block imagenes-redondas" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/2.png" class="block imagenes-redondas" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/3.png" class="block imagenes-redondas" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
             <br>
@@ -99,78 +165,36 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <div class="evento" data-aos="fade-down">
-                <div class="container">
-                    <h1>Visión</h1>
-                    <p>Ser la empresa líder en
-                        consultoría empresarial y
-                        tecnológica en México,
-                        reconocida por nuestro
-                        compromiso con la excelencia,
-                        la innovación y el impacto
-                        positivo en la comunidad
-                        empresarial.
-                    </p>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-        </div>
-        <div class="container">
-            <div class="content">
-                <h1>Valores</h1>
-            </div>
-            <div id="carouselExampleAutoplaying" class="container carousel slide" data-bs-ride="carousel" data-aos="fade-up">
-                <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/1.png" class="block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/2.png" class="block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/3.png" class="block" alt="...">
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </main>
+        </main>
 
-    
+        <!-- Pie de pagina -->
+        <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+            <img class="imagenes-redondas footer-logo" src="../assets/logo.png" alt="Logo del portafolio">
+            <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+                <!-- <a href="https://twitter.com/freecodecampES" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a> -->
+                <a href="https://www.instagram.com/freecodecamp/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="mailto:lopezcarrada.mx@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+            <div class="derechos-de-autor">&copy; 2024 López Carrada & Asociados.</div>
+        </footer>
 
-    <footer>
-        &copy; 2024 López Carrada & Asociados.
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script>
-		AOS.init({
-            offset: 200,
-			duration: 1000,
-			once: true
-		});
-	</script>
-</body>
-
+        <script>
+            window.onload=function(){
+            var pos=window.name || 0;
+            window.scrollTo(0,pos);
+            }
+            </script>
+    </body>
 </html>

@@ -13,12 +13,15 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Scroll Tools -->
     
     <!-- Icono -->
-    <link rel="icon" href="..assets/logo.ico">
+    <link rel="icon" href="../assets/logo.ico">
 
+    <!-- Scripts -->
     <script defer src="../script/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Scroll Tools -->
 
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,43 +29,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Menú -->
     <header>
         <span class="menuComprimido" onclick="openNav()">&#9776;</span>
-        <!-- <a href="#"><img src="assets/logo.png" alt="Logo de López Carrada & Asociados"></a> -->
-        <a href="../index.html"><img src="../assets/1.png" alt="Logo de López Carrada & Asociados"></a>
+        <a href="../index.html"><img class="imagenes-redondas" src="../assets/1.png" alt="Logo de López Carrada & Asociados"></a>
         <div id="mySidenav" class="sidenav" onclick="closeNav()">
-            <a href=""><i class="bi bi-house-fill center boton-animado"></i></a>
+            <a href="#"><i class="bi bi-house-fill container boton-animado"></i></a>
             <a href="#" class="boton-animado">Acerca del equipo</a>
-            <a href="#" class="boton-animado">Nuestros clientes</a>
+            <a href="#" class="boton-animado">Propuesta de valor</a>
+            <a href="clientes.html" class="boton-animado">Nuestros clientes</a>
             <a href="#" class="boton-animado">Contacto</a>
         </div>
         
         <nav>
             <a href="#" class="boton-animado">Acerca del equipo</a>
-            <a href="./src/valor.html" class="boton-animado">Propuesta de valor</a>
-            <a href="#" class="boton-animado">Nuestros clientes</a>
+            <a href="#" class="boton-animado">Propuesta de valor</a>
+            <a href="clientes.html" class="boton-animado">Nuestros clientes</a>
             <a href="#" class="boton-animado">Contacto</a>
         </nav>
     </header>
 
     <div onclick="closeNav()">
         <main>
-            Las pequeñas y medianas empresas
-            (PYMEs) y los emprendedores
-            frecuentemente enfrentan desafíos en
-            mejorar su eficiencia y rentabilidad. La
-            falta de asesoría experta y herramientas
-            adecuadas limita su crecimiento y éxito.
-            <br><br>
-            Esta falta de soporte impide que muchas
-            empresas alcancen su potencial,
-            afectando su competitividad en el
-            mercado y su contribución a la
-            economía.
+            <br>
+            <br>
+            <div class="container" data-aos="fade-up" data-aos-delay="400">
+                <p class="inicio">Asesoría integral y personalizada utilizando tecnología de última generación y metodologías
+                    innovadoras para mejorar la eficiencia y rentabilidad de nuestros clientes.
+                </p>
+            </div>
         </main>
 
         <main>
-            <div class="content">
+            <br>
+            <br>
+            <div class="container" data-aos="flip-up" data-aos-delay="400">
+                <p class="inicio">Las pequeñas y medianas empresas
+                    (PYMEs) y los emprendedores
+                    frecuentemente enfrentan desafíos en
+                    mejorar su eficiencia y rentabilidad. La
+                    falta de asesoría experta y herramientas
+                    adecuadas limita su crecimiento y éxito.
+                    <br><br>
+                    Esta falta de soporte impide que muchas
+                    empresas alcancen su potencial,
+                    afectando su competitividad en el
+                    mercado y su contribución a la
+                    economía.</p>
+            </div>
+        </main>
+
+        <main>
+            <div class="container">
                 <ul>
                     <li class="item1">Según el Instituto Nacional de Estadística y Geografía (INEGI), el 75% de
                         las PYMEs en México cierran antes de cumplir dos años de operación
@@ -83,17 +101,29 @@
                 </ul>
             </div>
         </main>
-
-        <main>
-            <div class="content">
-                <h2>Propuesta de valor</h2>
-                <p>Asesoría integral y personalizada utilizando tecnología de última generación y metodologías
-                    innovadoras para mejorar la eficiencia y rentabilidad de nuestros clientes.</p>
-            </div>
-        </main>
     </div>
-    <footer>
-        <p>&copy; 2024 López Carrada & Asociados.</p>
+    
+    <!-- Pie de pagina -->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="imagenes-redondas footer-logo" src="../assets/logo.png" alt="Logo del portafolio">
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <!-- <a href="https://twitter.com/freecodecampES" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="https://github.com/freeCodeCamp/freeCodeCamp" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+            </a> -->
+            <a href="https://www.instagram.com/freecodecamp/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="mailto:lopezcarrada.mx@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos-de-autor">&copy; 2024 López Carrada & Asociados.</div>
     </footer>
 </body>
 
