@@ -1,15 +1,30 @@
+/* Variables globales */
+:root {
+    --tamano-texto: 22px;
+    --color-primario: #000;
+    --color-secundario: #818181;
+    --color-terciario: #bebdbd;
+    --color-cuaternario: #f5f5f5;
+    --color-quintenario: #005fb2;
+}
+
+/* Estilos generales */
 * {
     margin: 0vh;
     padding: 0vh;
-    font-size: 22px;
+    font-size: var(--tamano-texto);
     font-family: "Ovo", serif;
     font-weight: 400;
     font-style: normal;
 }
 
 body {
-    background-color: #f2f2f2;
     font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
 }
 
 h2 {
@@ -17,6 +32,41 @@ h2 {
     text-align: center;
 }
 
+span {
+    display: inline;
+}
+
+p {
+    font-size: 1.75vw;
+    line-height: 2.5em;
+}
+
+.boton-animado {
+    display: inline-block;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    background-color:transparent;
+    border-radius: 4px;
+    transition: transform 0.55s ease-in-out;
+}
+
+.boton-animado:hover {
+    transform: scale(1.05);
+    color: var(--color-quintenario);
+    transition: 0.7s;
+}
+
+/* Para imagenes con proporcion 1:1 */
+.imagenes-redondas {
+    width: 210px;
+    height: 210px;
+    margin: 15px 10px 0 15px;
+    transition: 0.7s;
+    clip-path: circle(45% at 52% 50%);
+}
+
+/* Menú de navegación */
 header{
     position: sticky;
     top: 0;
@@ -25,12 +75,12 @@ header{
     display: flex;
     transition: 0.7s;
     height: 105px;
-    background: #e9e9e9;
+    background: var(--color-cuaternario);
     z-index: 10;
 }
 
 header.abajo{
-    background: #000;
+    background: var(--color-primario);
 }
 
 header a{
@@ -45,7 +95,7 @@ header.abajo .menuComprimido {
 }
 
 header.abajo a{
-    color: #bebdbd;
+    color: var(--color-terciario);
     transition: 0.7s;
 }
 
@@ -54,65 +104,65 @@ header.abajo .imagenes-redondas{
     transition: 0.7s;
 }
 
-.primera-vista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: transparent;
-    position: relative;
+nav {
+    padding: 1.25em 0 0 0;
+    margin: 0;
+    text-align: center;
+    transition: 1.75s;
+    font-size: 1em;
 }
 
+nav a {
+    color: var(--color-primario);
+    text-decoration: none;
+    padding: 1em;
+    margin: 0 2em;
+    transition: 0.7s;
+}
+
+/* Vista principal (Sección Hero) */
 .imagen-fondo {
     position: sticky;
     top: 30%;
     width: fit-content;
     height: fit-content;
-    clip-path: circle(44% at 50% 50%);
-    /* position: absolute;
+    clip-path: circle(45% at 50% 50%);
+}
+
+.vista-principal {
+    position: relative;
+    background-color: var(--color-cuaternario);
+    background-image: url(../assets/1.png);
+    opacity: 0.99;
+    background-size: fill;
+    background-position: center top;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+.vista-principal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    z-index: -1; */
+    background-color: rgba(255, 255, 255, 0.55); /* Ajustamos opacidad mediante rgba */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+    pointer-events: none; /* Permite que los eventos pasen a través del pseudo-elemento */
+}
+
+.primera-vista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
 
 .inicio {
     line-height: 2.5em;
     font-size: 3vw;
-}
-
-.texto-inicio {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5vw;
-    position: absolute;
-}
-
-.proyecto {
-    position: relative;
-  }
-
-.menuComprimido {
-    font-size: 1.6em;
-    cursor: pointer;
-    display: none;
-}
-
-.imagenes-redondas {
-    width: 210px;
-    height: 210px;
-    margin: 15px 10px 0 15px;
-    transition: 0.7s;
-    clip-path: circle(45% at 52% 50%);
-}
-
-h1 {
-    margin: 0;
-    text-align: center;
-}
-
-span {
-    display: inline;
 }
 
 main {
@@ -121,83 +171,17 @@ main {
     padding: 20px;
 }
 
-nav {
-    padding: 1em;
-    margin: 1vw 8% 0 2vw;
-    text-align: center;
-    transition: 1.75s;
-    font-size: 1.35vw;
-}
-
-nav a {
-    color: #000;
-    text-decoration: none;
-    padding: 1em;
-    margin: 0 2em;
-    transition: 0.7s;
-    font-size: 1em;
-}
-
-.boton-animado {
-    display: inline-block;
-    padding: 5px 5px;
-    text-align: center;
-    text-decoration: none;
-    background-color:transparent;
-    border-radius: 4px;
-    transition: transform 0.55s ease-in-out;
-}
-
-.boton-animado:hover {
-    transform: scale(1.3);
-    color: #005fb2;
-    transition: 0.7s;
-}
-
-.indice-z-cambio {
-    margin: 0;
-    padding: -100px;
-    z-index: 10;
-}
-
-p {
-    font-size: 1.75vw;
-    line-height: 2.5em;
-}
-
-
-/* Carrusel */
-.fondo-carrusel {
-    background-color: transparent;
-}
-
-.tamano-carrusel {
-    height: 80%;
-}
-
-
 /* Pie de pagina (footer) */
-.seccion-oscura {
-    color: white;
-    background-color: #8181817b;
-}
-
-
 footer {
     min-height: 300px;
+    color: white;
+    background-color: var(--color-terciario);
 }
-  
+
 .footer-logo {
     height: 100px;
     width: 100px;
     margin: 10px;
-}
-  
-.footer-texto {
-    font-size: 1.5rem;
-    padding: 20px;
-    margin-bottom: 30px;
-    font-family: 'Quicksand', sans-serif;
 }
   
 .iconos-redes-sociales a {
@@ -234,6 +218,12 @@ footer {
 }
 
 
+/* Menu lateral (Para dispositivos móviles) */
+.menuComprimido {
+    font-size: 1.6em;
+    cursor: pointer;
+    display: none;
+}
 
 .sidenav {
     height: 100%;
@@ -252,7 +242,7 @@ footer {
     padding: 8px 8px 8px 12px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: var(--color-secundario);
     display: block;
     transition: 0.35s;
 }
@@ -272,23 +262,24 @@ footer {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: #f2f2f2;
 }
-  
+
+/* Responsividad en elementos (Media Query) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1210px) {
     header {
         justify-content:center;
         height: 70px;
     }
+    
     .menuComprimido {
         margin: 12px 20vw 20px 20px;
         display:block;
-        color: #000;
+        color: var(--color-primario);
     }
 
     .imagenes-redondas {
@@ -304,7 +295,7 @@ footer {
     }
 
     .inicio {
-        font-size: 6.5vw;
+        font-size: 5.5vw;
     }
 
     p {
@@ -312,7 +303,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1100px) {
+@media screen and (min-width: 500px) and (max-width: 1210px) {
     .imagenes-redondas {
         margin-top: 0;
         width: 165px;
@@ -332,16 +323,13 @@ footer {
     }
 }
 
-/* @media screen and (max-width: 700px) {
-    
-} */
+@media screen and (max-width: 500px) {
+    .imagenes-redondas {
+        width: 135px;
+        height: 135px;
+    }
 
-/* @media screen and (max-width: 350px) {
     .inicio {
-        font-size: 1em;
+        font-size: 6.5vw;
     }
-
-    p {
-        font-size: 0.65em;
-    }
-} */
+}
