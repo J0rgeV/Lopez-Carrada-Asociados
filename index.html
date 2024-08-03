@@ -19,11 +19,15 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> <!-- Bootstrap Framework -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Bootstrap Framework - Icons -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Scroll Tools -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- Swiper's CSS -->
+        <link rel="stylesheet" href="styles/swiper.min.css"> <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="styles/estilos-swiper.css">
 
         <!-- Scripts -->
         <script defer src="script/main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script> <!-- Bootstrap Framework -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- Scroll Tools -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> <!-- Swiper's JS -->
 
         <!-- Fuente -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +35,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- Menú -->
+        <!-- Encabezado (Menú) -->
         <header class="d-flex flex-row justify-content-center">
             <span class="menuComprimido" onclick="abrirMenu()">&#9776;</span>
             <div id="mySidenav" class="sidenav" onclick="cerrarMenu()">
@@ -48,69 +52,86 @@
             </nav>
         </header>
 
-        <!-- Contenido Principal -->
-        <main class="vista-principal" onclick="cerrarMenu()" data-aos="fade-in" data-aos-delay="500">
+        <!-- Contenido Principal (Hero) -->
+        <main class="vista-principal" onclick="cerrarMenu()" data-aos="fade-in" data-aos-delay="400">
             <div class="primera-vista text-center" data-aos="flip-down" data-aos-delay="1000">
-                <p class="inicio">No sólo es en tu <span class="inicio" style="color:#0066ff; font-weight: 600;">historia e imagen</span> una nueva falacia elaborada, también requieres de <span class="inicio" style="color:#0066ff; font-weight: 600;">compromiso</span></p>
+                <p class="inicio">
+                    Además de una nueva falacia elaborada de tu <span class="inicio" style="color:#0066ff; font-weight: 600;">historia</span> e <span class="inicio" style="color:#0066ff; font-weight: 600;">imagen</span>, también requieres de <span class="inicio" style="color:#0066ff; font-weight: 600;">compromiso</span>
+                    <br>
+                    <span data-aos="fade-down" data-aos-delay="2000">
+                        <a href="#" class="boton-animado">Agenda una reunión!</a>
+                    </span>
+                </p>
             </div>
 
             <div class="text-center" data-aos="fade-in">
-                <p class="inicio">Somos una consultora de estrategia empresarial Mexicana a base del <span class="inicio" style="color:#32bc00;">diagnóstico empresarial</span>, diseño e implementación de <span class="inicio" style="color:#32bc00;">soluciones</span>, capacitación, evaluación & seguimiento <span class="inicio" style="color:#32bc00;">continuo</span>.</p>
+                <p class="inicio">Somos una consultora de estrategia empresarial Mexicana fundada en 2024 a base del <span class="inicio" style="color:#32bc00;">diagnóstico empresarial</span>, diseño e implementación de <span class="inicio" style="color:#32bc00;">soluciones</span>, capacitación, evaluación & seguimiento <span class="inicio" style="color:#32bc00;">continuo</span>.</p>
             </div>
-
+            
             <br><br><br><br><br><br><br>
 
-            <div class="text-center" style="background-color: var(--color-terciario);">
-                <br>
+            <!-- Mision y Vision -->
+            <div class="content">
+                <h1>Impulsa tu negocio mediante</h1>
             </div>
-
-            <br><br><br><br>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        <h1 data-aos="fade-in" data-aos-delay="600">
-                            <i class="bi bi-clipboard-fill" style="font-size: larger;"></i>
+            <div data-aos="flip-right">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cuadro-swiper">
+                            <h4 class="text-center">Análisis de la empresa</h4>
                             <br>
-                            Misión
-                        </h1>
-                        <p data-aos="fade-down" data-aos-delay="200">
-                            Transformar el panorama
-                            empresarial mexicano,
-                            apoyando a las pequeñas y
-                            medianas empresas (PYMEs)
-                            y a los emprendedores con
-                            soluciones innovadoras y
-                            personalizadas.
-                        </p>
-                    </div>
-
-                    <div class="col-sm">
-                        <h1 data-aos="fade-right" data-aos-delay="600">
-                            <i class="bi bi-eye-fill" style="font-size: larger;"></i>
+                            A través de la recopilación de información de la empresa encontramos maneras de mejorar y crecer.
+                        </div>
+                        <div class="swiper-slide cuadro-swiper">
+                            <h4 class="text-center">Diseño de soluciones</h4>
                             <br>
-                            Visión
-                        </h1>
-                        <p data-aos="fade-left" data-aos-delay="200">
-                            Ser la empresa líder en
-                            consultoría empresarial y
-                            tecnológica en México,
-                            reconocida por nuestro
-                            compromiso con la excelencia,
-                            la innovación y el impacto
-                            positivo en la comunidad
-                            empresarial.
-                        </p>
+                            Adaptamos a cada cliente soluciones mediante las mejores prácticas de la industria.
+                        </div>
+                        <div class="swiper-slide cuadro-swiper">
+                            <h4 class="text-center">Implementación de soluciones</h4>
+                            <br>
+                            Con estrategias diseñadas para la resolución de desafíos.
+                        </div>
+                        <div class="swiper-slide cuadro-swiper">
+                            <h4 class="text-center">Gestión (Seguimiento y evaluación)</h4>
+                            <br>
+                            Monitoreamos constantemente los indicadores clave de rendimiento y evaluamos el progreso.
+                        </div>
+                        <div class="swiper-slide cuadro-swiper">
+                            <h4 class="text-center">Capacitación y formación</h4>
+                            <br>
+                            Personalizada a según las necesidades del cliente.
+                        </div>
                     </div>
+                    <!-- Agrega Paginacion -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br>
+
+            <div class="content">
+                <h1>Lo que hacemos</h1>
+            </div>
+            <div data-aos="zoom-in">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h5 class="text-center">Experiencia y referencias comerciales</h5>
+                            Con profesionales del branding y el comportamiento del consumidor.
+                        </div>
+                        <div class="swiper-slide">
+                            <h5 class="text-center">Consistencia y cohesión</h5>
+                            De la identidad de marca reconocible en todos los canales de comunicación.
+                        </div>
+                        <div class="swiper-slide">
+                            <h5 class="text-center">Eficiencia en tiempo y costos</h5>
+                            Para el ahorro de recursos y la optimización de procesos con expertos.
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
 
-            <br><br><br><br>
-                
-            <div class="text-center" style="background-color: #bebdbd;">
-                <br>
-            </div>
-            
             <br><br><br><br><br><br><br>
 
             <div class="container">
@@ -172,13 +193,12 @@
                     </button>
                 </div>
             </div>
-
             <br><br><br><br><br><br>
         </main>
 
         <!-- Pie de pagina -->
         <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
-            <img class="imagenes-redondas footer-logo" src="../assets/logo.png" alt="Logo del portafolio">
+            <img class="imagenes-redondas footer-logo" src="assets/logo.png" alt="Logo del portafolio">
             <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
                 <a href="https://www.instagram.com/lopezcarrada.mx/" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-instagram"></i>
@@ -202,5 +222,13 @@
                 window.scrollTo(0, pos);
             }
         </script>
+        <!-- Primer Swiper -->
+        <script src="script/swiper.js"></script>
+
+        <!-- Segundo Swiper -->
+        <script src="../script/swipe-cubo.js"></script>
+
+        <!-- Swiper JS -->
+        <script src="script/swiper.min.js"></script>
     </body>
 </html>

@@ -41,20 +41,26 @@ p {
     line-height: 2.5em;
 }
 
+button {
+    font-size: 1.75vw;
+    line-height: 2.5em;
+    
+}
+
 .boton-animado {
     display: inline-block;
     padding: 5px 5px;
     text-align: center;
     text-decoration: none;
     background-color:transparent;
-    border-radius: 4px;
-    transition: transform 0.55s ease-in-out;
+    border-radius: 0;
+    transition: transform 1.55s ease-in-out;
 }
 
 .boton-animado:hover {
     transform: scale(1.05);
     color: var(--color-quintenario);
-    transition: 0.7s;
+    transition: 1.7s;
 }
 
 /* Para imagenes con proporcion 1:1 */

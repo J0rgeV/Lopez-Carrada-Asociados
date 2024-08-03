@@ -16,7 +16,7 @@ function cerrarMenu() {
 // Inicializamos Animate On Scroll
 AOS.init({
     offset: 200,
-    duration: 1500,
+    duration: 2250,
     delay: 100,
     once: true
 });

@@ -1,0 +1,45 @@
+/* body {
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+} */
+
+.cuadro-swiper {
+    background-image:url(../assets/5.png);
+    filter: opacity(75%);
+    color: var(--color-terciario);
+}
+
+.swiper-container {
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+/* Swiper efecto cubo */
+.swiper {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 10vh;
+}
+
+.swiper-slide1 {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide1 img {
+    display: block;
+    width: 100%;
+}

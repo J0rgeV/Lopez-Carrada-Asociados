@@ -1,5 +1,5 @@
 // Inicializamos Swiper con propiedades para ejecución de animaciones de cubo.
-var swiper = new Swiper(".mySwiper", {
+var swiperCubo = new Swiper(".mySwiper", {
     effect: "cube",
     grabCursor: true,
     cubeEffect: {
