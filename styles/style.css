@@ -22,6 +22,11 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.fondo-contacto {
+    background-color: var(--color-primario);
+    color: white;
+}
+
 h1 {
     margin: 0;
     text-align: center;
@@ -64,12 +69,29 @@ button {
 }
 
 /* Para imagenes con proporcion 1:1 */
-.imagenes-redondas {
+.imagenes-logos {
     width: 210px;
     height: 210px;
     margin: 15px 10px 0 15px;
     transition: 0.7s;
     clip-path: circle(45% at 52% 50%);
+}
+
+.imagenes-redondas {
+    width: 260px;
+    height: 260px;
+    margin: 15px 10px 0 15px;
+    transition: 0.7s;
+    clip-path: circle(50% at 50% 50%);
+}
+
+/* Para imagenes con proporcion 1:1 */
+.imagenes-redondas-grandes {
+    width: 320px;
+    height: 320px;
+    margin: 15px 10px 0 15px;
+    transition: 0.7s;
+    clip-path: circle(50% at 50% 50%);
 }
 
 /* Menú de navegación */
@@ -105,7 +127,7 @@ header.abajo a{
     transition: 0.7s;
 }
 
-header.abajo .imagenes-redondas{
+header.abajo .imagenes-logos{
     filter: invert(100%) drop-shadow(0 0 0.75rem #000);
     transition: 0.7s;
 }
